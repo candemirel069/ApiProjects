@@ -13,6 +13,6 @@ public partial class Ilce
 
     public int SehirId { get; set; }
 
-    [JsonIgnore]
+    //[JsonIgnore]
     public virtual Sehir Sehir { get; set; } = null!;
 }

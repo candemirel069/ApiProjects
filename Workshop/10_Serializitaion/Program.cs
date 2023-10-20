@@ -5,6 +5,7 @@ public class Sehir
     public int Id { get; set; } = Program.UID++;
     public string Adi { get; set; } = "";
     public string Plaka { get; set; } = "";
+   [XmlIgnore]
     public List<Ilce> Ilceler { get; set; } = new List<Ilce>();
 }
 
@@ -13,7 +14,7 @@ public class Ilce
     public int Id { get; set; } = Program.UID++;
     public string Adi { get; set; } = "";
 }
-[XmlRoot("sehirler")]
+[XmlRoot("Cities")]
 public class SehirListesi : List<Sehir>
 {
 
@@ -34,7 +35,6 @@ internal class Program
             Plaka = "06"
         });
         return Sehirler;
-
     }
     public static SehirListesi GetData2()
     {

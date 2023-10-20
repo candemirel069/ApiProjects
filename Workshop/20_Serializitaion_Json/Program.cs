@@ -1,5 +1,6 @@
 ﻿using System.Text.Encodings.Web;
 using System.Text.Json;
+using System.Text.Json.Serialization;
 using System.Text.Unicode;
 
 public class Sehir
@@ -8,7 +9,7 @@ public class Sehir
     public string? Adi { get; set; }
     public string? Plaka { get; set; }
 
-    //[JsonIgnore]
+    [JsonIgnore]
     public List<Ilce> Ilceler { get; set; }
 }
 
@@ -63,7 +64,7 @@ internal class Program
     public static int UID = 1;
     static void Main(string[] args)
     {
-        var data = GetData2();
+        var data = GetData1();
 
         var jsonString = JsonSerializer.Serialize(data,
             new JsonSerializerOptions

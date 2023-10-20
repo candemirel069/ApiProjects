@@ -1,0 +1,13 @@
+1.
+XML	Extended Markup Language
+Json	JavaScript Object Notation
+SOA
+
+Web Service	Soap		XML
+Web Api		RestFull	Json
+
+
+
+2.
+HTTP VERBs
+https://www.restapitutorial.com/lessons/httpmethods.html#:~:text=The%20primary%20or%20most%2Dcommonly,or%20CRUD)%20operations%2C%20respectively.

@@ -14,6 +14,7 @@ namespace Location.SampleApp.Controllers
             ViewBag.SehirId = SehirId;
             return View();
         }
+
         public IActionResult PlainHtml()
         {
             return View();

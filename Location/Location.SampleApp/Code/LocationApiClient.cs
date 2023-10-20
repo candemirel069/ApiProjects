@@ -4,13 +4,19 @@ namespace Location.SampleApp.Code;
 
 public class LocationApiClient
 {
-    public HttpClient CreateClient() => new HttpClient() { BaseAddress = new Uri("https://localhost:5555/api/") };
+    public HttpClient CreateClient()
+    {
+        return new HttpClient()
+        {
+            BaseAddress = new Uri("https://localhost:5555/api/")
+        };
+    }
 
     public async Task<T?> GetAsync<T>(string url, int id) where T : class
     {
         using (var client = CreateClient())
         {
-            var result = await client.GetAsync($"{url}/{id}");
+            var result = await client.GetAsync($"{url}/{id}"); // https://localhost:5555/api/{url}/{id}
 
             if (result.IsSuccessStatusCode)
             {

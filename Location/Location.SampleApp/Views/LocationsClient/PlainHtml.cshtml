@@ -22,9 +22,9 @@
             $.ajax({
                 url: "https://localhost:5555/api/Sehirler",
                 method: "GET",
-                success: function (res) {
+                success: function (responseBody) {
                     var tableString = "";
-                    $.each(res, function (index, value) {
+                    $.each(responseBody, function (index, value) {
                         tableString += "<tr><td>" + value.id+ "</td><td>" + value.adi + "</td></tr>";
                     });
                     $("#table1").append(tableString);

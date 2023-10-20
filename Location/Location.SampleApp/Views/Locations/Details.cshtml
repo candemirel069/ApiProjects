@@ -1,0 +1,41 @@
+﻿@model Location.SampleApp.Models.City
+
+@{
+    ViewData["Title"] = "Sehir Detay";
+}
+
+<h1>Sehir</h1>
+
+<h3>@Model.Adi (@Model.Id)  </h3>
+
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                Id
+            </th>
+            <th>
+                Adi
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model.Ilce)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Id)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Adi)
+
+                </td>
+                <td>
+                    Details
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

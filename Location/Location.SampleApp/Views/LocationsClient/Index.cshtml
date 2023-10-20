@@ -1,0 +1,19 @@
+﻿<div class="container">
+    <h1>Consume Location Web Api </h1>
+    <hr />
+    <h3>Şehir Listesi</h3>
+    <hr />
+    <table id="table1" class="table table-striped">
+        <tr><th>ID</th><th>Sehir</th><th></th></tr>
+    </table>
+</div>
+
+
+@section Scripts{
+    <script src="~/js/location-consumer.js"></script>
+    <script>
+        $(function () {
+            GetSehirListesi();
+        });
+    </script>
+}
